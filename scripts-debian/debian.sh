@@ -1,7 +1,9 @@
 #DOCKER
-echo "        ####################################################### "
-echo "        #                   INSTALLING DOCKER                  # "
-echo "        ####################################################### "
+
+echo "              ╭──────────────────────────────────────────────────────────────╮ "
+echo "              │                       INSTALLING DOCKER                      │ "
+echo "              ╰──────────────────────────────────────────────────────────────╯ "
+
 sudo apt-get update -y
 
 sudo apt-get install -y \
@@ -27,9 +29,12 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io -y
 sudo docker run hello-world
 
 #fix docker deamon
-echo "        ####################################################### "
-echo "        #                   FIXING DOCKER                  # "
-echo "        ####################################################### "
+
+echo "              ╭──────────────────────────────────────────────────────────────╮ "
+echo "              │                        FIXING DOCKER                         │ "
+echo "              ╰──────────────────────────────────────────────────────────────╯ "
+
+
 cd /home
 mkdir $USER/.docker
 sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
@@ -40,9 +45,12 @@ docker run hello-world
 
 
 #DOCKER_COMPOSE
-echo "        ####################################################### "
-echo "        #                   INSTALLING DOCKER COMPOSE         # "
-echo "        ####################################################### "
+
+echo "              ╭──────────────────────────────────────────────────────────────╮ "
+echo "              │                    INSTALLING DOCKER COMPOSE                 │ "
+echo "              ╰──────────────────────────────────────────────────────────────╯ "
+
+
 sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 #Apply executable permissions to the binary
 sudo chmod +x /usr/local/bin/docker-compose
